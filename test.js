@@ -1,27 +1,25 @@
-var users = []
-
-function AddUser(Name, Email, password) {
-    if(Name == null || Email == undefined || password == "") {
-        console.log("Please enter all fields")
+function calculateSum(arr) {
+    var sum = 0;
+    for(i = 0; i < arr.length; i++) {  // خطأ: متغير i مش معرف بـ var/let
+        sum += arr[i];
     }
-
-    var user = {
-        Name: Name,
-        Email: Email,
-        password: password // هذا غير آمن!
-    }
-
-    users.push(user)
-
-    console.log("user added: " + Name)
+    return sum;
 }
 
-function login(name, pass){
-    if(name = "") {
-        console.log("Empty name")
-    }
+var numbers = [1, 2, 3, 4, 5];
 
-    if(pass = "") {
-        console.log("Empty password")
+console.log("Total is: " + calculateSum(numbers));
+
+function greetUser(name) {
+    if(name) {
+        console.log("Hello " + name);
+    } else {
+        console.log("Hello guest");
     }
+}
+
+greetUser("Alice");
+greetUser();
+
+function unusedFunction()
 yti-mpap-ybd
