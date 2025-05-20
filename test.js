@@ -1,5 +1,6 @@
 function calculateSum(arr) {
     var sum = 0;
+    var i=0;
     for(i = 0; i < arr.length; i++) {  // خطأ: متغير i مش معرف بـ var/let
         sum += arr[i];
     }
